@@ -1,26 +1,16 @@
 import React from 'react';
 import PianoKey from './PianoKey';
 
-const keyList = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+const keyList = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
 
-const Piano = props => {
+const Piano = () => {
   return (
     <div className="piano">
-      <h2>Piano Wrapper</h2>
-
-      <div>
-        {
-          keyList.map(indKey => (
-            <PianoKey keyName={indKey} />
-          ))
-        }
-      </div>
+      { keyList.map(indKey => (
+          <PianoKey key={indKey} keyName={indKey} />
+      )) }
     </div>
   );
 };
-
-// Piano.propTypes = {
-//   keys: PropTypes.array
-// };
 
 export default Piano;
