@@ -35,6 +35,10 @@
   width: 100%;
 }
 
+.piano-key:active {
+  background: lightseagreen;
+}
+
 .piano-key span {
   font-size: 20px;
   font-weight: bold;
