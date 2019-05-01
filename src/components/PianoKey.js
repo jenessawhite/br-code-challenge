@@ -1,14 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const PianoKey = props => {
-  return (
-    <button>{props.keyName}</button>
-  );
-};
+class PianoKey extends React.Component {
+  handleClick = (name) => {
+    console.log(name, ' was clicked.');
+  }
 
-PianoKey.propTypes = {
-  
+  render() {
+    const { keyName } = this.props
+    return (
+      <button onClick={() => this.handleClick(keyName)} className="piano-key">
+        <span>
+          {keyName}
+        </span>
+      </button>
+    );
+  }
 };
 
 export default PianoKey;
